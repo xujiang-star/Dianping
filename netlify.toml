@@ -1,0 +1,13 @@
+# Netlify 配置文件 - 点评网
+
+[build]
+  # ⚠️ 不要手动设置 publish 目录！@netlify/plugin-nextjs 插件会自动处理
+  command = "npm run build"
+
+# 使用官方 Next.js 插件（必须）
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Next.js 16 要求 Node.js >= 20.9.0
+[build.environment]
+  NODE_VERSION = "20"
